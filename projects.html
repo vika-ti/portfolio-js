@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Victoria Timofeev's Projects</title>
+    <meta name="description" content="CS projects done by Victoria Timofeev" />
+    <link rel="stylesheet" href="styles.css">
+    <script></script>
+    <noscript>This site works best with JavaScript enabled.</noscript>
+</head>
+<body>
+<header>
+    <h1>Projects</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <search>
+        <form>
+            <label for="site-search">Search:</label>
+            <input type="search" id="site-search" name="q">
+        </form>
+    </search>
+</header>
+
+<main>
+    <section>
+        <canvas id="myCanvas" width="200" height="100">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="black" fill="lightblue" />
+        </svg>
+
+    </section>
+
+    <section>
+        <article>
+            <h2>Recipe Website</h2>
+            <p>
+                I built a multi-page <strong>recipe website</strong> to showcase my favorite recipes and to store them for
+                easy access.
+            </p>
+            <pre><code>function greet() { console.log("Hello, world!"); }</code></pre>
+
+            <figure>
+                <picture>
+                    <source srcset="assets/recipe-homepage.jpg" type="image/jpeg">
+                    <img src="assets/recipe-homepage.png" alt="Screenshot of the recipe website" />
+                </picture>
+                <figcaption>Preview of the recipe homepage</figcaption>
+            </figure>
+
+            <details>
+                <summary>How it was made</summary>
+                <ul>
+                    <li>Written with HTML, CSS, and PHP.</li>
+                    <li>It uses <b>CSV</b> file based storage.</li>
+                    <li><i>FAR Manager</i> for file management.</li>
+                </ul>
+            </details>
+
+            <p>
+                <a href="https://cookbook.laleks.com/">View Live Project</a>
+            </p>
+
+            <fieldset>
+                <legend>Leave Feedback</legend>
+                <form action="#">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"/><br>
+
+                    <label for="comment">Comment:</label><br>
+                    <textarea id="comment" name="comment" rows="4"></textarea><br>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+
+            <template id="project-template">
+                <article>
+                    <h3>Template Project</h3>
+                    <p>This is a reusable layout used internally.</p>
+                </article>
+            </template>
+
+        </article>
+
+        <article>
+            <h2>Mileage Tracker App</h2>
+            <p>An in-progress app built for loging mileage.</p>
+            <p>It will use PHP, MySQL, and JavaScript with a responsive interface.</p>
+
+            <aside>
+                <h3>Development Progress</h3>
+                <progress value="15" max="100">15%</progress>
+                <p>Working on basic backend functionality.</p>
+            </aside>
+
+            <h3>Development Plan</h3>
+            <ol>
+                <li>Design database schema</li>
+                <li>Implement backend</li>
+                <li>Create basic user interface</li>
+                <li>Test</li>
+            </ol>
+        </article>
+        
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Victoria Timofeev</p>
+</footer>
+
+</body>
+</html>
