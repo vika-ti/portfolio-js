@@ -6,85 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Victoria Timofeev's Resume</title>
     <meta name="description" content="Resume of Victoria Timofeev">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script></script>
 </head>
 <body>
 <noscript>This site works best with JavaScript enabled.</noscript>
 <header>
-    <hgroup>
-        <h1>Resume</h1>
-        <p>Victoria Timofeev</p>
-    </hgroup>
     <nav>
-        <ul>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
-             <li><a href="experiments.html">Experiments</a></li>
+            <li><a href="experiments.html">Experiments</a></li>
         </ul>
+    
+        <search>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
+        </search>
     </nav>
-
-    <search>
-        <form>
-            <label for="site-search">Search:</label>
-            <input type="search" id="site-search" name="q">
-        </form>
-    </search>
 </header>
 
 <main>
-    <section>
-        <h3>Education</h3>
-        <dl>
-            <dt>University of California, San Diego</dt>
-            <dd>San Diego, CA<br>
-                <abbr title="Bachelor of Science">B.S.</abbr> in Computer Science, <em>Expected June 2026</em><br>
-            </dd>
+    <div class = "resume">
+        <section>
+            <h3>Education</h3>
+            <dl>
+                <dt>University of California, San Diego</dt>
+                <dd>San Diego, CA<br>
+                    <abbr title="Bachelor of Science">B.S.</abbr> in Computer Science, <em>Expected June 2026</em><br>
+                </dd>
 
-            <dt>Moorpark College</dt>
-            <dd>Ventura, CA<br>
-                <abbr title="Associate in Science">A.S.</abbr> in Computer Science, May 2024<br>
-                Computer Programming Certificate
-            </dd>
-        </dl>
-    </section>
+                <dt>Moorpark College</dt>
+                <dd>Ventura, CA<br>
+                    <abbr title="Associate in Science">A.S.</abbr> in Computer Science, May 2024<br>
+                    Computer Programming Certificate
+                </dd>
+            </dl>
+        </section>
 
-    <section>
-        <h3>Experience</h3>
-        <p><strong>LALEKS Inc</strong> - <span>Junior Web Developer</span><br>
-        <em>Los Angeles, CA — Current Role</em></p>
-        <ul>
-            <li>Developing a mileage tracking app with PHP/MySQL/JavaScript for employee use.</li>
-            <li>Upgraded backend shopping cart modules.</li>
-            <li>Updated responsive designs for e-commerce websites.</li>
-            <li>Handled catalog updates.</li>
-        </ul>
-    </section>
+        <section>
+            <h3>Experience</h3>
+            <p><strong>LALEKS Inc</strong> - <span>Junior Web Developer</span><br>
+            <em>Los Angeles, CA — Current Role</em></p>
+            <ul>
+                <li>Developing a mileage tracking app with PHP/MySQL/JavaScript for employee use.</li>
+                <li>Upgraded backend shopping cart modules.</li>
+                <li>Updated responsive designs for e-commerce websites.</li>
+                <li>Handled catalog updates.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h3>Skills & Activities</h3>
-        <ul>
-            <li><strong>Languages:</strong> Conversational proficiency in Russian</li>
-            <li><strong>Programming:</strong> Java, Python, JavaScript, C++, PHP, HTML, CSS, SQL</li>
-            <li><strong>Tools:</strong> Git, GitHub, FAR Manager, VS Code</li>
-        </ul>
+        <section>
+            <h3>Skills & Activities</h3>
+            <ul>
+                <li><strong>Languages:</strong> Conversational proficiency in Russian</li>
+                <li><strong>Programming:</strong> Java, Python, JavaScript, C++, PHP, HTML, CSS, SQL</li>
+                <li><strong>Tools:</strong> Git, GitHub, FAR Manager, VS Code</li>
+            </ul>
 
-        <table style="border:black solid 1px;">
-            <colgroup>
-                <col span="1">
-                <col span="1">
-            </colgroup>
-            <caption>Related Courses</caption>
-            <tr><th>Topic</th><th>Courses</th></tr>
-            <tr><td>Database</td><td>Database Management</td></tr>
-            <tr><td>Theory</td><td>Artificial Intelligence: Probabilistic Reasoning; Theory of Computation</td></tr>
-            <tr><td>Application</td><td>Machine Learning for Music; Software Engineering</td></tr>
-            <tr><td>Conceptual</td><td>Systems Programming; Advanced Data Structures; Algorithm Design</td></tr>
-        </table>
+            <table style="border:black solid 1px;">
+                <colgroup>
+                    <col span="1">
+                    <col span="1">
+                </colgroup>
+                <caption>Related Courses</caption>
+                <tr><th>Topic</th><th>Courses</th></tr>
+                <tr><td>Database</td><td>Database Management</td></tr>
+                <tr><td>Theory</td><td>Artificial Intelligence: Probabilistic Reasoning; Theory of Computation</td></tr>
+                <tr><td>Application</td><td>Machine Learning for Music; Software Engineering</td></tr>
+                <tr><td>Conceptual</td><td>Systems Programming; Advanced Data Structures; Algorithm Design</td></tr>
+            </table>
 
-    </section>
+        </section>
+    </div>
 
     <template id="resume-template">
         <article>

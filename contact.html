@@ -6,35 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Victoria Timofeev's Contact</title>
     <meta name="description" content="Contact Victoria Timofeev">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script></script>
 </head>
 <body>
 <noscript>This site works best with JavaScript enabled.</noscript>
 <header>
-    <h1>Contact</h1>
     <nav>
-        <ul>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="experiments.html">Experiments</a></li>
         </ul>
-
+    
         <search>
-            <form>
-                <label for="site-search">Search:</label>
-                <input type="search" id="site-search" name="q">
-            </form>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
         </search>
     </nav>
 </header>
 
 <main>
-    <section>
+    <section class="reach">
         <h2>Get in Touch!</h2>
-        <form action="#">
+        <form action="https://www.httpbin.org/post" method="post">
             <fieldset>
                 <legend>Contact Form</legend>
 
@@ -73,21 +80,22 @@
                         <datalist id="referrer-options">
                             <option value="LinkedIn"></option>
                             <option value="GitHub"></option>
+                            <option value="Friend"></option>
                             <option value="Other"></option>
                         </datalist>
                     </form-group>
 
                     <button type="submit">Send</button>
-                </div>
+                </section>
             </fieldset>
         </form>
 
-        <dialog open>Thanks for reaching out!</dialog>
+        <!--<dialog open>Thanks for reaching out!</dialog>-->
     </section>
 
     <hr>
-
-    <section>
+    
+    <section class="info">
         <h2>Additional Info</h2>
         <h3>Location</h3>
         <address>
@@ -95,7 +103,7 @@
             La Jolla, CA 92093
         </address>
 
-        <h3>LinkedIn Profile:</h3>
+        <h3>LinkedIn Profile: Coming soon!</h3>
         <iframe
             src=""
             title="LinkedIn Profile">

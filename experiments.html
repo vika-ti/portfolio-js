@@ -5,59 +5,95 @@
     <title>Experiments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Experimenting with custom elements">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script></script>
 </head>
 <body>
 <noscript>This site works best with JavaScript enabled.</noscript>
 <header>
-    <h1>Experiments</h1>
     <nav>
-        <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="experiments.html">Experiments</a></li>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="experiments.html">Experiments</a></li>
         </ul>
+    
+        <search>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
+        </search>
     </nav>
 </header>
 <main>
-    <section>
-        <h2>Custom Element Test</h2>
-        <hello-box></hello-box>
-        <p>Check console log in dev tools!</p>
-    </section>
+    <div class="experiment">
+        <section>
+            <h2>Media</h2>
 
-    <section>
-        <h2>Canvas</h2>
-        <canvas id="myCanvas" width="200" height="100">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
+            <p>Play a video!</p>
+            <video controls>
+                <source src="assets/media/flowers.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+            <cite>Video by Andreas from Pixabay</cite>
 
-        <svg width="100" height="100">
-            <circle cx="50" cy="50" r="40" stroke="black" fill="lightblue">
-        </svg>
-    </section>
+            <p>Or some music!</p>
+            <audio controls>
+                <source src="assets/media/embraceMusic.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <br>
+            <cite>Music by Evgeny_Bardyuzha on Pixabay</cite>
+        </section>
 
-    <section>
-        <h2>Einstein's Mass-Energy Equation (MathML)</h2>
-        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <mi>E</mi>
-            <mo>=</mo>
-            <mi>m</mi>
-            <mo>&InvisibleTimes;</mo>
-            <msup>
-            <mi>c</mi>
-            <mn>2</mn>
-            </msup>
-        </math>
-    </section>   
-    
-    <section>
-        <h2>Code</h2>
-        <pre><code>function greet() { console.log("Hello, world!"); }</code></pre>
-    </section>
+        <section>
+            <h2>Custom Element Test</h2>
+            <hello-box></hello-box>
+            <p>Check console log in dev tools!</p>
+        </section>
 
+        <section>
+            <h2>Canvas</h2>
+            <canvas id="myCanvas" width="200" height="100">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="black" fill="lightblue">
+            </svg>
+        </section>
+
+        <section>
+            <h2>Einstein's Mass-Energy Equation (MathML)</h2>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mi>E</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <mo>&InvisibleTimes;</mo>
+                <msup>
+                <mi>c</mi>
+                <mn>2</mn>
+                </msup>
+            </math>
+        </section>   
+        
+        <section>
+            <h2>Code</h2>
+            <pre><code>function greet() { console.log("Hello, world!"); }</code></pre>
+        </section>
+    </div>
 </main>
 
 <footer>

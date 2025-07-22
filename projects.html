@@ -6,50 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Victoria Timofeev's Projects</title>
     <meta name="description" content="CS projects done by Victoria Timofeev">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script></script>
 </head>
 <body>
 <noscript>This site works best with JavaScript enabled.</noscript>
 <header>
-    <h1>Projects</h1>
     <nav>
-        <ul>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="experiments.html">Experiments</a></li>
         </ul>
+    
+        <search>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
+        </search>
     </nav>
-
-    <search>
-        <form>
-            <label for="site-search">Search:</label>
-            <input type="search" id="site-search" name="q">
-        </form>
-    </search>
 </header>
 
 <main>
-    <section>
+    <section class="projects">
         <article>
             <h2>Recipe Website</h2>
             <p>
-                I built a multi-page <strong>recipe website</strong> to showcase my favorite recipes and to store them for
-                easy access.
+                Back in high school, I first learned about basic web development. Once quarantine began, I started cooking for fun and wanted a place to store some of my favorite recipes from anywhere in the world. As a result, I created a <strong>recipe website</strong> to showcase these recipes and share them with family and friends.
             </p>
 
             <figure>
                 <picture>
-                    <source srcset="assets/recipe-homepage.jpg" type="image/jpeg">
-                    <img src="assets/recipe-homepage.png" alt="Screenshot of the recipe website">
+                    <source srcset="assets/images/recipe-homepage.jpg" type="image/jpeg">
+                    <img src="assets/images/recipe-homepage.png" alt="Screenshot of the recipe website">
                 </picture>
-                <figcaption>Preview of the recipe homepage</figcaption>
+                <figcaption>Preview of the recipe homepage.</figcaption>
             </figure>
 
             <details>
-                <summary>How it was made</summary>
+                <summary>Details of how it was made.</summary>
                 <ul>
                     <li>Written with HTML, CSS, and PHP.</li>
                     <li>It uses <b>CSV</b> file based storage.</li>
@@ -58,7 +64,7 @@
             </details>
 
             <p>
-                <a href="https://cookbook.laleks.com/">View Live Project</a>
+                <a target="_blank" href="https://cookbook.laleks.com/">View Live Project</a>
             </p>
 
             <template id="project-template">

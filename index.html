@@ -6,82 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Victoria Timofeev's Portfolio</title>
     <meta name="description" content="Victoria Timofeev's personal portfolio">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <script></script>
 </head>
 <body>
 <noscript>This site works best with JavaScript enabled.</noscript>
 <header>
-    <hgroup>
-        <h1>Victoria Timofeev</h1>
-        <p>UC San Diego Computer Science</p>
-    </hgroup>
-
     <nav>
-        <ul>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
             <li><a href="index.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
-             <li><a href="experiments.html">Experiments</a></li>
+            <li><a href="experiments.html">Experiments</a></li>
         </ul>
-    </nav>
     
-    <search>
-            <form>
-                <label for="site-search">Search:</label>
-                <input type="search" id="site-search" name="q">
-            </form>
-    </search>
+        <search>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
+        </search>
+    </nav>
 </header>
 
-<main>
-    <section>
-        <h2>About Me</h2>
-        <p> I'm a <abbr title="Computer Science">CS</abbr> <strong>student</strong> passionate about <em>web development</em>.</p>
+<main >
+    <div class="aboutMe">
+        <section>
+            <figure>
+                <img src="assets/images/laJolla.jpg" alt="Image of beach.">
+                <figcaption>Located in beautiful San Diego.</figcaption>
+                <cite>Photo by Nils Huenerfuerst on Unsplash</cite>
+            </figure>
 
-        <p><dfn title="Web Developement">Web Developement</dfn> is the process of building and maintaining websites and web applications.</p>
-        
-         <p>I <del>originally studied business</del> <ins>found my passion in computer science</ins>.</p>
+            <img src="assets/images/victoria.jpg" alt="Image of Victoria Timofeev">
+            <h2>I'm Victoria!</h2>
 
-        <p>My other interests include <mark>AI and full-stack development</mark>.</p>
-        
-        <p>I recently started using <kbd>Ctrl + Shift + P</kbd> in VS Code.</p>
+        </section>
 
-        <p>My favorite quote is</p>
-        <blockquote>
-            "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
-            <cite>— Antonie De-Saint Exupery</cite>
-        </blockquote>
-    </section>
+        <section>
+            <h2>About Me</h2>
+            <p> I'm a <abbr title="Computer Science">CS</abbr> <strong>student</strong> passionate about <em>web development</em>.</p>
 
-    <section>
-      <h2>Quick Facts</h2>
-      <dl>
-        <dt>Education</dt>
-        <dd>UC San Diego</dd>
-        <dt>Major</dt>
-        <dd>Computer Science</dd>
-        <dt>Hobbies</dt>
-        <dd>Figure Skating</dd>
-      </dl>
-    </section>
+            <p><dfn title="Web Developement">Web Developement</dfn> is the process of building and maintaining websites and web applications.</p>
+            
+            <p>I <del>originally studied business</del> <ins>found my passion in computer science</ins>.</p>
 
-    <section>
-        <h2>Media</h2>
+            <p>My other interests include <mark>AI and full-stack development</mark>.</p>
+            
+            <p>I recently started using <kbd>Ctrl + Shift + P</kbd> in VS Code.</p>
 
-        <p>Introductory video:</p>
-        <video controls>
-            <source src="placeholder.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <p>My favorite quote is</p>
+            <blockquote>
+                "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away."
+                <cite>— Antonie De-Saint Exupery</cite>
+            </blockquote>
 
-        <p>Background music:</p>
-        <audio controls>
-            <source src="placeholder.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+            <figure>
+                <img src="assets/images/portugal.jpg" alt="Image of Porto, Portugal.">
+                <figcaption>My most recent and favorite international trip was to Porto, Portugal.</figcaption>
+                <cite>Photo by Matt Roskovec on Unsplash</cite>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Quick Facts</h2>
+            <dl class="facts">
+                <dt>Education:</dt>
+                <dd>UC San Diego</dd>
+                <dt>Major:</dt>
+                <dd>Computer Science</dd>
+                <dt>Hobbies:</dt>
+                <dd>Figure skating, cooking, traveling, and long beach walks!</dd>
+            </dl>
+        </section>
+    </div>
 </main>
 
 <footer>
