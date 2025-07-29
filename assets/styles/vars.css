@@ -3,7 +3,16 @@
 :root {
     --background-color: rgb(233, 230, 225);
     --text-color: rgb(33, 29, 30);
+    --section-bg: white;
+    --nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
     --title-font: "Lora";
     --paragraph-font: "Roboto";
 } 
+
+[data-theme="dark"] {
+    --background-color: rgb(25, 22, 20);
+    --text-color: rgb(245, 240, 235);    
+    --section-bg: #1e1e1e;  
+    --nav-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}

@@ -1,17 +1,29 @@
 @import "vars.css";
 
 /* === EC === */
-h1, h2 {
-  color: color(display-p3 0.15 0.10 0.07);
-}
 
 figure:has(cite) {
     border: 2px dashed #8b5e3c;
     padding: 1rem;
-    background-color: #f3ebe6;
+    background-color: var(--section-bg);
 }
 
 /* === General === */
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    color: var(--text-color);
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
 
 * {
     margin: 0;
@@ -36,7 +48,7 @@ form-group {
 /* === Navigation Bar ==== */
 
 nav {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--nav-shadow);
     margin-bottom: 2rem;
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -53,7 +65,7 @@ nav ul {
 
 ul a {
     text-decoration: none;
-    color: #3f342e;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -61,8 +73,8 @@ ul a {
 }
 
 ul a:hover {
-    color: #1f1a18;
-    background-color: #e6e1dc;
+    color: var(--text-color);
+    background-color: var(--section-bg);
     border-radius: 4px;
     font-weight: bold;
 }
@@ -90,7 +102,7 @@ ul a:hover {
         display: block;
         font-size: 2rem;
         cursor: pointer;
-        color: #3f342e;
+        color: var(--text-color);
         grid-area: toggle;
         justify-self: end;
     }
@@ -118,7 +130,7 @@ footer {
     padding: 2rem 1rem;
     border-top: 1px solid #aaa; /* subtle separator */
     font-size: 0.9rem;
-    color: #3f342e;
+    color: var(--text-color);
     margin-top: 1rem;
 }
 
@@ -137,7 +149,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: white;
+    background-color: var(--section-bg);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -174,7 +186,7 @@ footer {
 .projects article a {
     display: inline-block;
     margin-top: 1rem;
-    color: #3f342e;
+    color: var(--text-color);
     font-weight: 500;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -184,10 +196,11 @@ footer {
 
 .projects article a:hover {
     background-color: #3f342e;
-    color: white;
+    color: var(--text-color);
 }
 
-.projects ul, .projects ol {
+.projects ul, 
+.projects ol {
     padding-left: 1.5rem;
 }
 
@@ -219,7 +232,7 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    background-color: white;
+    background-color: var(--section-bg);
 }
 
 .resume section {
@@ -263,7 +276,8 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.resume table th, .resume table td {
+.resume table th, 
+.resume table td {
     border: 1px solid #3f342e;
     padding: 0.5rem;
     text-align: left;
@@ -309,13 +323,36 @@ footer {
     font-weight: 500;
 }
 
-.reach form-group input, .reach form-group textarea, .reach form-group select {
+label span {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.reach form-group input, 
+.reach form-group textarea, 
+.reach form-group select {
     width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
     border: 1px solid #aaa;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.reach output {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    padding-left: 0.25rem;
+}
+
+.reach .error-message {
+    color: darkred;
+}
+
+.reach .info-message {
+    color: green;
 }
 
 .reach button[type="submit"] {
@@ -333,6 +370,47 @@ footer {
 .reach button[type="submit"]:hover {
     background-color: #2b221d;
     transform: scale(1.05);
+}
+
+.reach input,
+.reach textarea {
+  border: 1px solid #aaa;
+  transition: border-color 0.3s ease;
+}
+
+.reach input:invalid:focus,
+.reach textarea:invalid:focus {
+  border-color: darkred;
+  background-color: #fff4f4;
+}
+
+.reach input:valid,
+.reach textarea:valid {
+  border-color: darkgreen;
+  background-color: #f4fff4;
+}
+
+
+.reach input:placeholder-shown,
+.reach textarea:placeholder-shown {
+    opacity: 0.9;
+}
+
+.flash-error {
+    animation: flash 0.3s ease-in-out 0s 2 alternate;
+    border-color: darkred;
+}
+
+@keyframes flash {
+    from { background-color: #fff4f4; }
+    to { background-color: #ffdada; }
+}
+
+.char-counter {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 0.25rem;
+    color: inherit;
 }
 
 dialog {
@@ -455,7 +533,7 @@ dialog {
     border: 2px solid #3f342e;
     border-radius: 8px;
     padding: 1.5rem;
-    background-color: #f9f9f9;
+    background-color: var(--section-bg);
 }
 
 

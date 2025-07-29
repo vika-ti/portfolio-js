@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Victoria Timofeev's Contact</title>
+    <meta name="description" content="Contact Victoria Timofeev">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <script src="assets/scripts/form.js" defer></script>
+</head>
+<body>
+<noscript>This site works best with JavaScript enabled.</noscript>
+<header>
+    <nav>
+        <hgroup>
+            <h1>Victoria Timofeev</h1>
+            <p>UC San Diego Computer Science</p>
+        </hgroup>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon" aria-label="Menu">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="experiments.html">Experiments</a></li>
+        </ul>
+    
+        <search>
+                <form>
+                    <label for="site-search">Search:</label>
+                    <input type="search" id="site-search" name="q">
+                </form>
+        </search>
+    </nav>
+</header>
+
+<main>
+    <section class="reach">
+        <h2>Get in Touch!</h2>
+        <form action="https://www.httpbin.org/post" method="post" novalidate>
+            <fieldset>
+                <legend>Contact Form</legend>
+
+                <input type="hidden" name="possible_bot" value="true">
+                
+                <div class="formContent">
+                    <form-group>
+                        <label for="name">Name <span aria-hidden="true">*</span>:</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="30" pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces.">
+                    </form-group>
+
+                    <form-group>
+                        <label for="email">Email <span aria-hidden="true">*</span>:</label>
+                        <input type="email" id="email" name="email" required>
+                    </form-group>
+
+                    <form-group>
+                        <label for="message">Message <span aria-hidden="true">*</span>:</label>
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" placeholder="Enter your message here..."></textarea>
+                    </form-group>
+
+                    <form-group>
+                        <label for="category">Subject Category:</label>
+                        <select id="category" name="category">
+                            <optgroup label="Message">
+                                <option value="general">General</option>
+                                <option value="project">Project Feedback</option>
+                            </optgroup>
+                            <optgroup label="Opportunities">
+                                <option value="career">Career Inquiry</option>
+                            </optgroup>
+                        </select>
+                    </form-group>
+
+                    </form-group>
+                        <label for="referrer">How did you find me?</label>
+                        <input list="referrer-options" name="referrer" id="referrer">
+                        <datalist id="referrer-options">
+                            <option value="LinkedIn"></option>
+                            <option value="GitHub"></option>
+                            <option value="Friend"></option>
+                            <option value="Other"></option>
+                        </datalist>
+                    </form-group>
+
+                    <button type="submit">Send</button>
+
+                    <output class="error-message" aria-live="polite"></output>
+                    <output class="info-message" aria-live="polite"></output>
+                </section>
+            </fieldset>
+        </form>
+    </section>
+        <!--<dialog open>Thanks for reaching out!</dialog>-->
+
+    <hr>
+    
+    <section class="info">
+        <h2>Additional Info</h2>
+        <h3>Location</h3>
+        <address>
+            University of California, San Diego<br>
+            La Jolla, CA 92093
+        </address>
+
+        <h3>LinkedIn Profile: Coming soon!</h3>
+        <iframe
+            src=""
+            title="LinkedIn Profile">
+        </iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Victoria Timofeev</p>
+</footer>
+
+</body>
+</html>
